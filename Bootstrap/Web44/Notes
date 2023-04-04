@@ -1,0 +1,18 @@
+Step 1: download images
+     https://www.pexels.com/
+     Size: 1200 * 600
+Step 2:
+Write carousel code
+
+step 3: add required CDN Links
+          1)bootstrap.css - CDN
+          2)JQuery.js     - CDN
+          3)Popper.js     - JS CDN
+          4)bootstrap.js  - CDN
+step 4: write javascript to slide
+<script>
+        $('.carousel').carousel({
+            interval: 1000
+        })
+</script>
+
