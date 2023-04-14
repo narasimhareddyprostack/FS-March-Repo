@@ -6,4 +6,5 @@ let d = 'ten'
 
 console.log(a == b) //true
 console.log(a == c) //true
+console.log(a === c) //false
 console.log(a == d) //False
