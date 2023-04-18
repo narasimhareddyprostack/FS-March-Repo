@@ -8,8 +8,11 @@ let users = [{ "id": 1, "name": "Malvina", "email": "msimson0@gravatar.com" },
 { "id": 8, "name": "Franz", "email": "fbrion7@independent.co.uk" },
 { "id": 9, "name": "Ayn", "email": "atapton8@senate.gov" },
 { "id": 10, "name": "Aron", "email": "adonlon9@google.it" }]
-
+/* 
 console.log(users.length)// array size using length 10
 for (user of users) {
     console.log(user)
-}
+} */
+
+console.log(users[8])
+console.log(users[8].name)
