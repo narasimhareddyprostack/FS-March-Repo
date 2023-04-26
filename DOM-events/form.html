@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title> Blur and focus Exmaple</title>
+</head>
+
+<body>
+
+    <h2>Blur Events</h2>
+    <form>
+        <label>User Name</label>
+        <input type="text" id="abc" onblur="change_TextCase()" />
+    </form>
+
+</body>
+<script>
+    function change_TextCase() {
+        //alert("Test case 123")
+        let name = document.getElementById('abc').value
+        console.log(name)
+        //document.getElementById('abc').value = "Nayanatara"
+        document.getElementById('abc').value = name.toUpperCase()
+    }
+</script>
+
+</html>

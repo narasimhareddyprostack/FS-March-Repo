@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title> Digital clock</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Js functions</a>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <h2>Digital Clock</h2>
+                    </div>
+                    <div class="card-body">
+                        <h2 id="digi"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    setInterval(() => {
+        document.getElementById('digi').innerHTML = new Date().toLocaleTimeString()
+    }, 1000)
+
+</script>
+
+</html>
