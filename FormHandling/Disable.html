@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Button enable</title>
+</head>
+
+<body>
+    <h1>Button Enable Ex</h1>
+    <form>
+        <input type="checkbox" id="abc" onchange="return validateData()" /> Please accept Terms & Conditions
+        <br><br>
+
+        <input type="submit" id="btn" value="Submit" disabled />
+    </form>
+</body>
+<script>
+    function validateData() {
+        let flag = document.getElementById('abc').checked
+        //alert(flag)
+        document.getElementById('btn').disabled = !flag
+        return false
+    }
+</script>
+
+</html>
