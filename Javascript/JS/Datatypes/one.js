@@ -1,9 +1,21 @@
-var price = 399
+let brand = 'PARK AVENUE'
+let product_Name = 'Men Slim Fit Checkered Formal Shirt'
 
-var rating = 4.5
+let price = 1035;
+let rating = 4.2
 
-console.log(price)
+let discount = true
+let avail = 'Y'
+let stock;
+
+console.log(brand)
+console.log(typeof brand)
+console.log(typeof avail)
+
 console.log(typeof price)
-
-console.log(rating)
 console.log(typeof rating)
+
+
+console.log(typeof avail)
+console.log(typeof stock)
+console.log(typeof discount)
