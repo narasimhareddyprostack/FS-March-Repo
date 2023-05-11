@@ -2,11 +2,16 @@ let employees = [{ id: 101, name: "Rahul", sal: 45000 },
 { id: 102, name: "sonia", sal: 55000 }]
 
 let createEmployee = (emp) => {
-    setTimeout(() => {
-        employees.push(emp)
-    }, 4000)
-}
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let flag = true;
+            flag ? resolve("Data Inserted") : reject("Failed")
+            employees.push(emp)
+        }, 4000)
+    })
 
+
+}
 let getEmployees = () => {
     setTimeout(() => {
         let rows = ""
@@ -22,4 +27,12 @@ let getEmployees = () => {
     }, 2000)
 }
 createEmployee({ id: 103, name: "Priyanka", sal: 55000 })
-getEmployees()
+    .then((msg) => {
+        console.log(msg)
+        getEmployees()
+
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+

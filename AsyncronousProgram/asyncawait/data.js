@@ -2,11 +2,16 @@ let employees = [{ id: 101, name: "Rahul", sal: 45000 },
 { id: 102, name: "sonia", sal: 55000 }]
 
 let createEmployee = (emp) => {
-    setTimeout(() => {
-        employees.push(emp)
-    }, 4000)
-}
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let flag = true;
+            flag ? resolve("Data Inserted") : reject("Failed")
+            employees.push(emp)
+        }, 4000)
+    })
 
+
+}
 let getEmployees = () => {
     setTimeout(() => {
         let rows = ""
@@ -21,5 +26,9 @@ let getEmployees = () => {
         document.getElementById('tbody_Data').innerHTML = rows
     }, 2000)
 }
-createEmployee({ id: 103, name: "Priyanka", sal: 55000 })
-getEmployees()
+
+let execute = async () => {
+    await createEmployee({ id: 103, name: "priyanka", sal: 75000 })
+    getEmployees()
+}
+execute()
